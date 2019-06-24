@@ -1,0 +1,15 @@
+
+{
+    "_comment": "Generate configuration  http://pm2.keymetrics.io/docs/usage/application-declaration/",
+    "apps": [
+      {
+        "name": "libra_wallet",
+        "script": "npm start",
+        "instances": 1,
+        "exec_mode": "fork",
+        "watch": false,
+		"max_memory_restart" : "2048M",
+        "ignore_watch":["node_modules"]
+      }
+    ]
+  }

@@ -1,0 +1,67 @@
+
+:root{
+    /* --ci-color: linear-gradient(240deg, #4f466b 0%, #3e4574 100%); */
+    --ci-color: linear-gradient(240deg, #5e4f8a 0%, #4653a4 100%);
+    --ci-color-2: #2c2948
+  }
+  
+    body{
+      color: #fff;
+    }
+
+    html, body {
+      font-family: "Raleway", sans-serif;
+      font-weight: 400;
+      background-color: #fff;
+      font-size: 16px;
+      -ms-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+
+    .title:hover > a, .th-cl, .blog-thumb-2:hover .title, .osr-team-thumb-2:hover .title, .navigation li.active > a, .navigation li:hover > a{
+      color: #fff;
+    }
+  
+    .th-bg, .roadmap-slider-2::before, .navigation li a::after, .roadmap-slider-2 .slick-slide::after, .video-btn::after, .video-btn::before, .roadmap-slider-2 .slick-slide::before, .horizontal-progress .progress-bar::before{
+      background: var(--ci-color-2)
+    }
+  
+  .btn-sign-up{
+      background: #fff;
+      color: var(--ci-color-2);
+      font-weight: bold;    
+  }
+  
+  .svg-icon{
+    color: var(--ci-color-2);
+  }
+  
+  p{
+    color: var(--ci-color-2);
+  }
+  
+  .banner-caption{
+    color: #fff;
+  }
+  
+  /* @import url('https://fonts.googleapis.com/css?family=Itim');
+  
+  body h1, body h2, body h3, body h4, body h5, body h6{
+    font-family: 'Itim', cursive;
+  } */
+  
+  
+  .roadmap-slider .slick-arrow{
+    color: #fff!important;
+    background: var(--ci-color)!important;
+  }
+  
+  .light-black-bg{
+    background: var(--ci-color)!important;
+  }
+  
+  .btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
+  }

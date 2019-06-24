@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 255 100" style="enable-background:new 0 0 255 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#333333;}
+	.st1{font-family:'HiraKakuStd-W8-83pv-RKSJ-H';}
+	.st2{font-size:45.7567px;}
+	.st3{fill:#808080;}
+	.st4{font-family:'ArialMT';}
+	.st5{font-size:20.0068px;}
+	.st6{fill:url(#SVGID_1_);}
+</style>
+<g>
+	<text transform="matrix(1 0 0 1 106.6089 55.9248)" class="st0 st1 st2">Oxise</text>
+	<text transform="matrix(1 0 0 1 111.1084 83.5034)" class="st3 st4 st5">Cloud Platform</text>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="99.2891" y1="15.1339" x2="29.2139" y2="85.2091" gradientTransform="matrix(0.9956 0.0941 -0.0941 0.9956 -7.8124 -3.467)">
+		<stop  offset="0" style="stop-color:#301F67"/>
+		<stop  offset="1" style="stop-color:#4C2382"/>
+	</linearGradient>
+	<path class="st6" d="M3.78,31.69l26.98-26.3c0.52-0.5,1.21-0.78,1.93-0.78L71,4.8c0.73,0,1.44,0.3,1.95,0.83l26.2,26.85
+		c0.49,0.5,0.77,1.18,0.78,1.88l0.47,38.23c0.01,0.76-0.3,1.49-0.85,2.01L81.06,92.27c-1.76,1.68-4.68,0.41-4.63-2.03l0.73-41.87
+		c0.04-2.35-2.7-3.66-4.5-2.15L59.6,57.19c-0.72,0.61-1.71,0.8-2.6,0.51l-22.77-7.34c-2.19-0.71-4.23,1.45-3.4,3.6l7.72,19.94
+		c0.39,1.01,0.15,2.17-0.62,2.93l-13.07,13c-1.07,1.07-2.8,1.06-3.87-0.01L3.57,72.39c-0.52-0.52-0.81-1.22-0.8-1.95l0.18-36.81
+		C2.96,32.9,3.26,32.2,3.78,31.69z"/>
+</g>
+</svg>

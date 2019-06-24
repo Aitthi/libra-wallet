@@ -1,0 +1,85 @@
+.wrap-navbar{
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+}
+
+.navigation li a{
+    color: #fff;
+}
+
+.navigation li a::after, .navigation li a::before{
+    background: #fff;
+}
+
+.nav-outer{
+    padding: 35px 0 0;
+}
+.menu-holder {
+    padding: 15px 0;
+}
+
+.nav-outer.affix{
+    padding: 0 0 0;
+    z-index: 999999999;
+}
+
+.nav-outer .img_nav_fix{
+    display: none;
+}
+
+.nav-outer.affix .img_nav_fix{
+    display: block;
+}
+
+.nav-outer.affix .img_nav{
+    display: none;
+}
+
+.nav-outer .img_nav{
+    display: block;
+}
+
+.nav-outer.affix .navigation li a{
+    color: #404040;
+}
+
+.nav-outer.affix .navigation li a::after, .nav-outer.affix .navigation li a::before{
+    background: var(--ci-color-2);
+}
+
+.nav-outer.affix .menu-holder{
+    padding: 22px 0;
+}
+
+.btn-sign-in{
+    margin-right: 10px;
+    background: rgba(250, 235, 215, 0);
+    color: #fff;
+    border: solid 1px #fff;
+}
+
+.btn-sign-up{
+    padding: 8px 30px 8px;
+}
+
+.nav-outer.affix .btn-sign-up{
+    background: #2c2948;
+    color: #fff;
+}
+
+.nav-outer.affix .btn-sign-in{
+    color: #322d52;
+    border: solid 1px #322d52;
+    background: #fff;
+}
+
+
+.submit-btn, .btn {
+    border-radius: 5px!important;
+}
+
+.navbar{
+    padding-left: 0px;
+    padding-right: 0px;
+}

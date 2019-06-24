@@ -1,0 +1,103 @@
+.main-banner {
+    float: left;
+    width: 100%;
+    position: relative;
+    background: var(--ci-color);
+    padding-top: 65px;
+    min-height: 50vh;
+}
+.main-banner .banner-thumb img{
+    top: 125px;
+}
+
+.libra-logo {
+    display: block;
+    margin: 0 auto;
+    height: 100px;
+    width: 275px;
+    margin-top: 40px;
+}
+
+.head-title{
+    text-align: center;
+}
+.head-title h5{
+    font-weight: 300;
+}
+
+.wrap-body{
+    margin-top: 100px;
+}
+
+.wrap-body p{
+    color: #fff;
+}
+.wrap-account{
+    margin-top: 70px;
+    margin-bottom: -200px;
+    background: #fff;
+}
+.wrap-account .account{
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 0 34px 0 rgba(63, 66, 87, 0.1);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.btn-sign-in{
+    margin-right: 10px;
+    background: rgb(88, 80, 145);
+    color: #fff;
+    border: solid 1px #fff;
+    padding: 8px 30px 8px;
+}
+
+.list-account{
+    width: 100%;
+    border-collapse: separate;
+    caption-side: top;
+    padding: 0px;
+    background: rgb(255, 255, 255);
+    border-spacing: 0px;    
+}
+
+.list-account th{
+    border-bottom: 1px solid rgb(236, 239, 241);
+    text-align: left;
+    padding: 16px;
+    color: rgba(17, 51, 83, 0.3);
+    font-size: 14px;
+}
+
+.list-account td,
+.list-account p{
+    border-bottom: 1px solid rgb(236, 239, 241);
+    text-align: left;
+    padding: 16px;
+    color: rgb(88, 80, 145);
+    font-size: 14px;
+}
+
+.modal{
+    display: block;
+    background: #00000075;
+}
+
+.modal .wrap-account{
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 20%;
+}
+
+.modal .list-account td,
+.modal .list-account p{
+    border-bottom: unset;
+}
+
+.send-btn{
+    background: #fff;
+    border: solid 2px rgb(88, 80, 145);
+    color: rgb(88, 80, 145);
+}

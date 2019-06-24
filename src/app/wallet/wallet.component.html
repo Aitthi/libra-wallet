@@ -1,0 +1,224 @@
+<div class="main-banner">
+  <app-particles
+    [params]="myParams"
+    [width]="width"
+    [height]="height"
+    [ngStyle]="{ position: 'absolute', width: '100%' }"
+  >
+  </app-particles>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="wrap-body">
+          <!-- <div class="libra-logo">
+                    <img src="/assets/images/libra-header-logo-white.png" alt="libra">
+                </div> -->
+          <div class="head-title">
+            <h1>Libra Wallet on Testnet</h1>
+            <p>
+              Libra’s mission is to enable a simple global currency and
+              financial infrastructure that empowers billions of people.
+            </p>
+          </div>
+        </div>
+
+        <div class="wrap-account">
+          <div class="account">
+            <div style="text-align: right;">
+
+              <a class="btn btn-sign-up btn-sign-in btn-sm"
+                style="    
+                background: white;
+                color: #585091;
+                border: solid 1px;cursor: pointer;" (click)="openAccess()">Access</a
+              >
+
+              <a (click)="createWallet()" style="cursor: pointer;" class="btn btn-sign-up btn-sign-in btn-sm"
+                >New Wallet</a
+              >
+
+            </div>
+            <div style="margin-top: 10px;">
+              <table class="list-account">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Address</th>
+                    <th>Balance</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr *ngFor="let obj of walletList; let i = index">
+                    <td>{{i+1}}</td>
+                    <td>
+                        {{obj?.address}}
+                        <span style="cursor: pointer;" (click)="copy(obj?.address)"><i class="far fa-copy"></i></span>
+                    </td>
+                    <td>{{obj?.balance | currency: ' '}} Libra</td>
+                    <td style="text-align: right;">
+                      <a style="cursor: pointer;color: #fff;" class="btn btn-sign-up btn-sign-in btn-sm" (click)="openSend(obj)">Send</a>
+                    </td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" *ngIf="wallettModal">
+  <div class="modal-body">
+    <div class="container">
+      <div class="wrap-account">
+        <div class="account">
+          <div style="text-align: right;">
+
+            <a style="cursor: pointer;" (click)="saveWallett()" class="btn btn-sign-up btn-sign-in btn-sm">Save</a>
+
+            <div style="margin-top: 10px;">
+                <table class="list-account">
+                  <thead>
+                    <tr>
+                      <th>Address</th>
+                      <th>Balance</th>            
+                    </tr>
+                  </thead>
+                  <tbody>
+  
+                    <tr>
+                      <td>
+                        {{wallet?.address}}                         
+                      </td>
+                      <td>{{wallet?.balance | currency: ' '}} Libra</td>
+                    </tr>
+  
+                  </tbody>
+                </table>
+                <div>
+                <table class="list-account">
+                  <thead>
+                    <tr>
+                      <th>Mnemonic </th>                          
+                    </tr>
+                  </thead>
+                  <tbody>
+  
+                    <tr>
+                      <td>
+                          <p style="
+                          max-width: 500px;
+                          word-break: break-all;">
+                            {{wallet?.mnemonic}}
+                          </p>                          
+                      </td>
+                    
+                    </tr>
+  
+                  </tbody>
+                </table>
+                </div>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" *ngIf="transfer_state">
+    <div class="modal-body">
+      <div class="container">
+        <div class="wrap-account">
+          <div class="account">
+            <div style="text-align: right;">
+                
+              <a (click)="closeSend()" class="btn btn-sign-up btn-sign-in btn-sm" 
+              style="    
+                background: white;
+                color: #585091;
+                border: solid 1px;
+                cursor: pointer;">Cancel</a>
+                <a style="cursor: pointer;" (click)="transfer()" class="btn btn-sign-up btn-sign-in btn-sm">Send</a>
+  
+              <div style="margin-top: 10px;">
+                  <table class="list-account">
+                    <thead>
+                      <tr>
+                        <th>Address</th>
+                        <th>Amount</th>            
+                      </tr>
+                    </thead>
+                    <tbody>
+    
+                      <tr>
+                        <td>
+                          <input [(ngModel)]="_send_model.toAddress" class="form-control"  type="text">                    
+                        </td>
+                        <td>
+                            <input [(ngModel)]="_send_model.amount" class="form-control"  type="number">    
+                        </td>
+                      </tr>
+    
+                    </tbody>
+                  </table>
+                </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="modal" *ngIf="access_state" >
+      <div class="modal-body">
+        <div class="container">
+          <div class="wrap-account">
+            <div class="account">
+              <div style="text-align: right;">
+                  
+                <a (click)="closeAccess()" class="btn btn-sign-up btn-sign-in btn-sm" 
+                style="    
+                  background: white;
+                  color: #585091;
+                  border: solid 1px;
+                  cursor: pointer;">Cancel</a>
+                  <a style="cursor: pointer;" (click)="access()" class="btn btn-sign-up btn-sign-in btn-sm">Okay</a>
+    
+                <div style="margin-top: 10px;">
+                    <table class="list-account">
+                      <thead>
+                        <tr>
+                          <th>Mnemonic</th>
+                                   
+                        </tr>
+                      </thead>
+                      <tbody>
+      
+                        <tr>
+                          <td>
+                            <textarea [(ngModel)]="access_model" class="form-control"  >
+                            </textarea>         
+                          </td>
+                        </tr>
+      
+                      </tbody>
+                    </table>
+                  </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
