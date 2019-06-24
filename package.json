@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node --max_old_space_size=2048 node_modules/babel-cli/bin/babel-node.js index.js --presets es2015,stage-2",
+    "start": "node --max_old_space_size=2048 node_modules/babel-cli/bin/babel-node.js api/server.js --presets es2015,stage-2",
     "dev": "nodemon api/server.js --exec babel-node --presets es2015,stage-2",
     "build": "ng build",
     "test": "ng test",
