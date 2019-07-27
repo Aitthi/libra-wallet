@@ -21,10 +21,13 @@
     "@angular/platform-browser-dynamic": "~8.0.1",
     "@angular/router": "~8.0.1",
     "@types/jquery": "^3.3.29",
+    "bignumber.js": "^9.0.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
+    "libra-core": "^1.0.5",
     "lottie-web": "^5.5.5",
+    "nodemon": "^1.19.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
